@@ -4,8 +4,11 @@
   "description": "Study case using Tailwind CSS",
   "main": "index.js",
   "scripts": {
-    "build": "postcss css/tailwind.css -o public/build/tailwind.css",
-    "watch": "postcss css/tailwind.css -o public/build/tailwind.css --watch",
+    "build:style": "postcss src/styles/index.css -o src/styles/tailwind.css",
+    "watch:style": "postcss src/styles/index.css -o src/styles/tailwind.css --watch",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./ --out-dir dist",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
